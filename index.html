@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -21,11 +22,14 @@
 
         }
 
-        .top-wrapper {
-            min-width: 1700px;
-            max-width: 1800px;
+        .sections {
+            min-width: 1215px;
+         margin-right:400px;
+         margin-left:10px;
         }
-
+      .top-wrapper{
+         display: inline-block;
+      }
         .nav,
         .left,
         .right {
@@ -76,7 +80,7 @@
         }
 
         .section2 {
-            display: -moz-inline-grid;
+            display: inline-block;
             position: static;
             /* top: 330px; */
         }
@@ -88,14 +92,19 @@
         }
 
         .section3 {
+            float:right;
             display: inline-block;
             /* top:320px; */
             left: 0px;
             margin-right: 10px;
+            margin-left: 60px;
 
         }
 
         .section4 {
+            margin-top:0px;
+            margin-bottom:40px;
+            display: inline-block;
             left: 0px;
             min-width: 1120px;        
         }
@@ -110,7 +119,7 @@
             border-radius: 30%;
             overflow: hidden;
             margin: 10px 20px 10px 0;
-
+         float:left;
         }
 
         .section3>div>div {
@@ -124,8 +133,7 @@
         }
 
         .fake {
-            display: fixed;
-            height: 310px;
+            height: 300px;
         }
 
         .button {
@@ -152,7 +160,6 @@
 
         .button_h {
 
-            width: 110px;
             font-family: Jua;
             background-color: white;
             border: none;
@@ -160,7 +167,6 @@
             color: rgb(59, 57, 57);
             padding: 5px 0;
             text-align: center;
-            display: inline-block;
             font-size: 22.5px;
             margin: 30px 0 0 0;
 
@@ -176,7 +182,6 @@
             color: rgb(59, 57, 57);
             padding: 5px 0;
             text-align: center;
-            display: inline-block;
             font-size: 18px;
             margin: 4px;
 
@@ -194,16 +199,13 @@
 
         .sidecontainer {
             z-index: 1;
-            display: grid;
             margin: 10px 10px 10px 10px;
-            grid-template: repeat(1, 300px) / repeat(3, 300px);
         }
 
         .backcontainer {
             display: grid;
             position: absolute;
             margin: 15px 10px 10px 80%;
-            min-width: 1000px;
             grid-template: repeat(4, 90px) / repeat(1, 180px);
         }
 
@@ -222,8 +224,45 @@
             background-color: orange;
 
         }
-
-        
+      aside{
+         position:absolute;
+         padding-left:14px;
+         border : 1px solid black;
+         display:inline;
+         width:330px;
+         right:30px;
+         float:right;
+      }
+      .like-show>div:not(.item){
+         width:100px;
+         display:inline-block;
+      }
+      .like-show>div>img{
+         display:block;
+      }
+      .like-show>div>p{
+         width:100px;
+         display:inline-block;
+         margin: 0 0 0 0;
+      }
+      body{
+         min-width:1500px;
+         margin : 0 0 0 0;
+         padding: 0 0 0 0;
+      }
+      footer{
+         margin : 0 0 0 0;
+         padding: 0 0 0 0;
+         width:100%;
+         height:200px;
+         background-color:#eeeeee;
+         text-align:center;
+      }
+      footer>p{
+         margin-left:10px;
+         margin-bottom : 3px;
+         margin-top : 3px;
+      }
     </style>
 </head>
 
@@ -273,12 +312,12 @@
     </section>
 
     <div class="fake"></div>
-   
-   <div class="top-wrapper">
-      <section id="content" class="section2 inline left-float">
-         <div class="item"><button class="button_h"> 계열사 | </button>
+    <div class="sections">
+      <div class="top-wrapper">
+        <section id="content" class="section2">
+          <div class="item"><button class="button_h"> 계열사 | </button>
             <button class="button_d">suna company</button></div>
-         <div class="container -moz-inline-grid">
+          <div class="container">
             <div>
                <img src="./images/banner1.png" width="200" height="100">
             </div>
@@ -315,53 +354,95 @@
             <div>
                <img src="./images/banner12.png" width="200" height="100">
             </div>
-         </div>
+          </div>
 
-      </section>
+        </section>
 
-      <section id="content" class="section3 inline right-float" style="width: 50%">
-         <div class="item">
+        <section id="content" class="section3">
+          <div class="item">
             <button class="button_h"> 상영중 | </button>
-            <button class="button_d"> Best 3 </button>
-         </div>
-         <div class="sidecontainer">
+            <button class="button_d"> 오페라의 유령 </button>
+          </div>
+          <div class="sidecontainer">
             <div>
                <img src="./images/opera.JPG" width="300" height="300">
             </div>
-            <div>
-               <img src="./images/cats.JPG" width="300" height="300">
-            </div>
-            <div>
-               <img src="./images/lesmiserables.JPG" width="300" height="300">
-            </div>
+          </div>
+
+
+        </section>
+      </div>
+      <section class="section4">
+         <div class="item">
+            <button class="button_h"> 개발자 |</button>
+            <button class="button_d"> 컴퓨터 공학과, 정선아. </button>
          </div>
-
-
+         <img class="profile" src="./images/me.jpg" width="200" height="200">
+         <div class="text">
+            <a>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit officiis pariatur nemo magni obcaecati, dicta veniam fuga maiores corporis commodi quo, ut non harum veritatis unde doloribus fugit. Sint repellendus tempore ipsum! Nobis illo culpa quo, dignissimos delectus doloribus? Dignissimos qui autem quidem, delectus reiciendis temporibus quas excepturi et id fuga, ducimus expedita nesciunt tenetur cupiditate. Sed pariatur veritatis necessitatibus officia praesentium sit nobis, consectetur eius labore, quam consequuntur doloribus accusantium, suscipit laudantium maiores facere voluptates enim. At eos quidem, doloremque eveniet dolorem eius accusamus vel sint illum, non ipsam nobis amet, iusto eligendi voluptatum perferendis beatae fuga dolorum unde alias. Alias quod sequi debitis voluptatibus ipsa laborum, quo minima cupiditate dolores in, numquam expedita ex quidem asperiores suscipit unde molestiae consequatur reiciendis? Ad eos repudiandae ullam sed ut, nemo sunt, facilis quas voluptatibus velit totam impedit adipisci eius iure exercitationem officiis accusamus optio aspernatur sequi atque esse perspiciatis quasi ducimus enim! Blanditiis, fugiat. Facere eaque quis, consequuntur quo commodi pariatur accusamus iste placeat esse vel laudantium cum odio ipsam modi, est quia cumque! Est obcaecati ad voluptas ab aliquid corrupti eius architecto eligendi, tenetur eaque veniam illo minus accusantium laudantium pariatur adipisci consequuntur magni maxime ratione! Laudantium, fugiat ea.</a>            
+         </div>
       </section>
    </div>
-    <section id="content" class="section4">
-        <div class="item"><button class="button_h"> 개발자 |</button>
-            <button class="button_d"> 컴퓨터 공학과, 정선아. </button></div>
-        <div class="left-float">
-            <img class="profile" src="./images/me.jpg" width="200" height="200"></div>
-            <a>제가 정말 열심히 만들었는데 만든 티가 별로 안나서 너무 슬픕니다. 흑흑. 곧 개발이 다 되겠죠? 얼른 다 됐으면 좋겠어요. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt itaque autem quas, mollitia ducimus cumque numquam a id delectus non quod excepturi cupiditate error iste, assumenda inventore cum quos est nemo ratione laboriosam eum quaerat repellat facilis! Libero modi facilis odio id fuga iusto, reprehenderit consectetur soluta repellat voluptates deserunt quo debitis odit, commodi voluptatum eaque dolorum voluptate necessitatibus. Veritatis alias quas commodi ipsam, voluptates quibusdam fuga voluptatem id assumenda beatae distinctio voluptas, atque odio ullam repudiandae veniam? Atque animi officiis voluptates praesentium enim corrupti illum cupiditate dolor veritatis odio dicta quis, consequuntur quibusdam corporis beatae, nobis labore hic impedit.</a>
+   <footer>
+      <br>
+      <br>
+      <p>웹 응용 프로그래밍 레이아웃 실습</p>
+      <p>ⓒ 2020. suna jung All Rights Reserved.</p>   
+   </footer>
+   <div class="aside-wrapper" style="position:absolute;left:0px;top:400px;width:100%;min-width:1630px;">
+      <aside>
+         <div class="hot-topic">
+             <div class="item" style="display:block">
+               <button class="button_h"> 인기 토픽 | </button>
+                  <p> ① 위의 배너 광고를 클릭하면 변해요! </p>
+                  <p> ② nav 메뉴에 마우스를 갖다대면 변해요! </p>
+                  <p> ③ 웹사이트 크기에 따라 요소들이 변해요!</p>
+             </div>      
+         </div>
+         <div class="like-show">
+             <div class="item" style="display:block">
+               <button class="button_h"> 찜 한 공연 | </button>
+             </div>      
+            <div>
+               <img src="./images/cats.JPG" width="100" height="100">
+               <p>이것</p>
+            </div>
+            <div>
+               <img src="./images/lesmiserables.JPG" width="100" height="100 ">
+               <p>저것</p>
+            </div>   
+            <div>
+               <img src="./images/cats.JPG" width="100" height="100">
+               <p>이것</p>
+            </div>
+            <div>
+               <img src="./images/lesmiserables.JPG" width="100" height="100 ">
+               <p>저것</p>
+            </div>   
+            <div>
+               <img src="./images/cats.JPG" width="100" height="100">
+               <p>이것</p>
+            </div>
+            <div>
+               <img src="./images/lesmiserables.JPG" width="100" height="100 ">
+               <p>저것</p>
+            </div>   
+            <div>
+               <img src="./images/cats.JPG" width="100" height="100">
+               <p>이것</p>
+            </div>
+            <div>
+               <img src="./images/lesmiserables.JPG" width="100" height="100 ">
+               <p>저것</p>
+            </div>   
+            <div>
+               <img src="./images/cats.JPG" width="100" height="100">
+               <p>이것</p>
+            </div>
             
-    </section>
-
-    <!-- <section4 id="content inline">
-        
-        <div class="items left-float">
-            <img src="./images/add1.png" width="30" height="30">
-        </div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quas omnis repellat quos sit maiores corrupti earum molestiae ipsam quisquam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quas omnis repellat quos sit maiores corrupti earum molestiae ipsam quisquam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quas omnis repellat quos sit maiores corrupti earum molestiae ipsam quisquam?</p>
-        <div class="items right-float">
-            <img src="./images/add1.png" width="30" height="30">
-        </div>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quas omnis repellat quos sit maiores corrupti earum molestiae ipsam quisquam?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quas omnis repellat quos sit maiores corrupti earum molestiae ipsam quisquam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat reprehenderit consectetur commodi delectus est sunt modi temporibus vero reiciendis qui!</p>
-      
-    </section4> -->
-
-
+         </div>
+      </aside>
+   </div>
 </body>
 
 </html>
